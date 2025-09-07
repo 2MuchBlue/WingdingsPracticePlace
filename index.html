@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wingdings Practice</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="icon" href="happy.png">
+
+</head>
+<body style="display: flex; justify-content: center;">
+    <div style="max-width: 75%;">
+        <h1>Wingdings Practice!</h1>
+        <div>
+            <p>
+                This is just a little tool to help people learn or practice how to read/write in the uppercase
+                Wingdings font. (Mostly for Undertale/Deltarune stuffs)
+            </p>
+            <p>
+                It only shows uppercase WingDings as those (should) be the only flavor of Wingdings that Gaster ever speaks in, so you have been warned(?)
+            </p>
+        </div>
+        <div class="tranBlock denotedNestedDiv">
+            <h2 style="grid-area: title;">Translation Practice</h2>
+            <button class="largeFont" style="grid-area: reroll;" onclick="rollSentance()">Reroll Sentance</button>
+            <canvas class="wingdings" id="sentanceCanvas" width="256" height="64" style="width: 100%; grid-area: prompt; background-color: black;"></canvas>
+            <input class="largeFont" id="transIn" style="grid-area: input;">
+            <button class="largeFont" type="submit" style="grid-area: submit;" onclick="submitSentance()">submit</button>
+            <div style="grid-area: score; display: flex; justify-content: center; align-items: center;">
+                <span id="transScore">score: 0</span>
+            </div>
+        </div>
+        <hr style="width: 100%; height: 0px; color: var(--text)">
+        <div class="charBlock denotedNestedDiv">
+            <h2 style="grid-area: title;">Single Character Practice</h2>
+            <button class="largeFont"  onclick="rollCharacter()" style="grid-area: reroll;">Reroll Character</button><br>
+            <canvas class="wingdings" style="width: 128px; grid-area: prompt;" width="16" height="16" id="charCanvas"></canvas>
+            <input class="largeFont" id="charIn" style="grid-area: input;">
+            <button class="largeFont" type="submit" style="grid-area: submit;">submit</button>
+            
+            <div style="grid-area: score; display: flex; justify-content: center; align-items: center;">
+                <span id="charScore">score: 0</span>
+            </div>
+        </div>
+        <hr style="width: 100%; height: 0px; color: var(--text)">
+        <div class="denotedNestedDiv">
+            <h3>Links</h3>
+            <ul>
+                <li>
+                    <a target="_blank" href="https://www.deviantart.com/thegeminisage/art/Wingdings-Mnemonic-Devices-Learn-Wingdings-606931252">
+                        Wingdings Mnemonic Devices and Charater Key by TheGeminiSage
+                    </a>
+                </li>
+<!--
+                <li>
+                    <a target="_blank" href="fez version">
+                        A version of this page for the FEZ language of Zu-ish
+                    </a>
+                </li>
+-->
+            </ul>
+        </div>
+        <hr style="width: 100%; height: 0px; color: var(--text)">
+        <div>
+            <h3>Me!</h3>
+            <p>
+                This was made by <a href="https://2MuchBlue.github.io" target="_blank">2MuchBlue</a>! You can <a href="https://github.com/2MuchBlue/WingdingsPracticePlace" target="_blank">find this page on github!</a>
+            </p>
+        </div>
+        <hr style="width: 100%; height: 0px; color: var(--text)">
+        <p style="text-align: center;">
+            <a href="https://2MuchBlue.github.io">Back To Home Page</a>
+        </p>
+        
+    </div>
+    <p class="TwoMuchBlueFlag">
+        made by <a href="https://2MuchBlue.github.io">2MuchBlue</a>
+    </p>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>

@@ -1,0 +1,107 @@
+
+:root{
+    --text : #ffbc1f;
+    --primary : #34145c64;
+}
+
+@font-face {
+    font-family: monogram;
+    src: url("https://mangoshool.github.io/Design/monogram%20demo/monogram-extended.ttf");
+}
+
+h1, h2, h3, h4, h5 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+body{
+    margin: 50px;
+    font-family: monogram, "Courier New";
+    font-size: 2rem;
+    display: grid;
+    
+    background-image: url("https://2MuchBlue.github.io/pics/icons/epicBackground-01.png");
+    background-size: 32px;
+    background-color: #3b1361;
+
+    image-rendering: pixelated;
+    color: var(--text);
+}
+
+.denotedNestedDiv{
+    margin-left: 20px; 
+    border-left: 2px solid var(--text); 
+    padding-left: 5px;
+
+    /*border-radius: 20px;*/
+
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
+.denotedNestedDiv:not([long]) *{ /* if a denotedNestedDiv class has no [long] attrabute, the children will have to margin */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.denotedNestedDiv:not([long]):has(*){
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.tranBlock{
+    display: grid;
+    grid-template-areas:
+    "title title"
+    "reroll reroll"
+    "score score"
+    "prompt prompt"
+    "input submit";
+    grid-template-rows: min-content min-content min-content min-content;
+}
+
+.charBlock{
+    display: grid;
+    grid-template-areas:
+    "title title"
+    "reroll reroll"
+    "prompt score"
+    "input submit";
+    grid-template-rows: min-content min-content min-content 50px;
+    grid-template-columns: 1fr 1fr;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: monogram, "Courier New";
+}
+
+.jumper {
+    animation: jump 1s linear 0s 1 forwards alternate;
+}
+
+@keyframes jump {
+    0% {transform: translate(0px, 0px);}
+    50% {transform: translate(0px, 16px);}
+    100% {transform: translate(0px, 0px);}
+}
+
+a{
+    color: #19b726;
+}
+
+
+.TwoMuchBlueFlag {
+    padding: 5px;
+    margin: 0px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: #663399c0;
+    border-top-right-radius: 10px;
+}
+
+.largeFont {
+    font-size: 1.5rem;
+}
